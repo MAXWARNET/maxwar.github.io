@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaClone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>InstaClone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="post-feed">
+            </section>
+        <section class="new-post">
+            <h2>Create a Post</h2>
+            <form id="post-form">
+                <label for="image-upload">Select an Image:</label>
+                <input type="file" id="image-upload" accept="image/*">
+                <textarea name="caption" id="caption" placeholder="Write a caption..."></textarea>
+                <button type="submit">Share</button>
+            </form>
+        </section>
+    </main>
+    <script>
+      const postForm = document.getElementById('post-form');
+const imageUpload = document.getElementById('image-upload');
+const captionInput = document.getElementById('caption');
+const postFeed = document.querySelector('.post-feed');
+
+postForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  // Simulate image upload and caption (replace with actual upload logic)
+  const uploadedImage = {
+    url: 'path/to/uploaded/image.jpg', // Replace with actual image URL
+  };
+  const caption = captionInput.value;
+
+  // Create a post element and populate it with image and caption
+  const newPost = document.createElement('article');
+  newPost.classList.add('post');
+  newPost.innerHTML = `
+    <img src="${uploadedImage.url}" alt
+
+    </script>
+  <style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ddd;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.post-feed {
+    flex: 3;
+}
+
+.new-post {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.new-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.new-post label {
+    font-weight: bold;
+}
+
+.new-post textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.new-post button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add styles for individual posts (images, captions, like/comment buttons) as needed */
+
+  </style>
+</body>
+</html>
